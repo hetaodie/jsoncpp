@@ -1,15 +1,4 @@
-# jsoncpp
-
-- 此工程时基于jsoncpp进行封装,原代码地址:https://github.com/open-source-parsers/jsoncpp
-- 在封装时参考了webrtc内部使用的规则.
-- 通过运行cmake,可以生成相应的静态库
-- 使用时把.a库和include中的头文件copy到相应的工程即可
-
-  使用示例:
-
-```c++
 #include <iostream>
-
 #include "json/json_decode.h"
 int main() {
 
@@ -24,7 +13,7 @@ int main() {
 
     std::string data;
     rtc::GetStringFromJsonObject(jmessage, "name",
-                                &data);
+                                 &data);
     std::cout <<"name:" << data<<std::endl;
 
     std::cout << "begin write json example" << std::endl;
@@ -40,5 +29,3 @@ int main() {
 
     return 0;
 }
-```
-
